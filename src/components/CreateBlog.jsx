@@ -18,7 +18,8 @@ const CreateBlog = () => {
 
     const [currentUser, setCurrentUser] = useLocalStorage('current_user', null);
     const [blogInfo, setBlogInfo] = useState({
-        userId: currentUser.uid
+        userId: currentUser.uid,
+        favourite: false
     });
     const blogCollectionReference = collection(db, "blogs");
     const [alertConfig, setAlertConfig] = useState({});
@@ -58,7 +59,10 @@ const CreateBlog = () => {
 
             <Button variant="contained" onClick={handleCreateBlog}>Create Blog</Button>
             <Alert alertConfig={alertConfig} />
-            <Link to="/viewblogs">View Blogs</Link>
+            <Box display="flex" flexDirection="row" justifyContent="space-around">
+                <Link to="/viewblogs">View Blogs</Link>
+                <Link to="/viewfavourites">View Favourites</Link>
+            </Box>
         </Box>
     )
 }

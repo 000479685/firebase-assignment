@@ -40,7 +40,7 @@ const SignupPage = () => {
                 required
                 id="email"
                 label="Email"
-                defaultValue=""
+                // defaultValue=""
                 placeholder='Enter your email'
                 type='email'
                 value={credentials.email}
@@ -53,7 +53,7 @@ const SignupPage = () => {
                 required
                 id="password"
                 label="Password"
-                defaultValue=""
+                // defaultValue=""
                 placeholder='Enter your Password'
                 type='password'
                 value={credentials.password}
